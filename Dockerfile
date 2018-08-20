@@ -1,4 +1,4 @@
-FROM gitlab/gitlab:latest
+FROM gitlab/gitlab-ce:latest
 MAINTAINER agowa338
 
 ENV DEBIAN_FRONTEND=noninteractive
