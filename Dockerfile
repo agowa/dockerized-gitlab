@@ -19,3 +19,12 @@ RUN apt update && \
     apt install docker-ce && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
+
+# Expose web & ssh
+EXPOSE 443 80 22
+
+# Define data volumes
+VOLUME ["/etc/gitlab", "/var/opt/gitlab", "/var/log/gitlab"]
+
+# Wrapper to handle signal, trigger runit and reconfigure GitLab
+CMD ["/usr/local/bin/wrapper"]
