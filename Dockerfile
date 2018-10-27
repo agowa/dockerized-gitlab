@@ -4,7 +4,7 @@ MAINTAINER agowa338
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
-    apt install \
+    apt install -y \
         apt-transport-https \
         ca-certificates \
         curl \
@@ -16,7 +16,7 @@ RUN apt update && \
         $(lsb_release -cs) \
         stable" && \
     apt update && \
-    apt install docker-ce && \
+    apt install -y docker-ce && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
 
