@@ -42,5 +42,5 @@ dockerhub:on-schedule:
     - schedules
   script:
     - apk add --update curl
-    - curl --data build=true -X POST https://registry.hub.docker.com/u/agowa338/ansible/trigger/$dockerhub_trigger_token/
+    - curl --data build=true -X POST https://registry.hub.docker.com/u/agowa338/gitlab-ce/trigger/$dockerhub_trigger_token/
 
